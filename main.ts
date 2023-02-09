@@ -15,10 +15,6 @@ input.onButtonPressed(Button.A, function(){
     radio.sendNumber(code)
 })
 
-//radio.onReceivedNumber(function(receivedNumber){
-  //  whaleysans.showNumber(receivedNumber)
-//})
-
 radio.onReceivedValue(function(key, value){
 
     basic.showNumber(value)
@@ -34,8 +30,8 @@ radio.onReceivedValue(function(key, value){
     if (codeValue && grpValue){
         radio.setGroup(nextGroup)
         code = nextCode
-        let codeValue = false
-        let grpValue = false
+        codeValue = false
+        grpValue = false
         music.playTone(Note.C, music.beat(BeatFraction.Whole))
     }
 })
